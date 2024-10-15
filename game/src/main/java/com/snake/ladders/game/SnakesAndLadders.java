@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SnakesAndLadders {
-    Map<Integer,Integer>portals;
+    public Map<Integer,Integer>portals;
 
     SnakesAndLadders(){
         this.portals=new HashMap<>();

@@ -7,11 +7,15 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 public class Player {
-    private Long id;
-    private String name;
+    private int id;
+    private int position;
 
-    Player(String name,Long id){
+//    public int getPosition(){
+//        return this.position;
+//    }
+
+    Player(int id){
         this.id=id;
-        this.name=name;
+        this.position=0;
     }
 }
