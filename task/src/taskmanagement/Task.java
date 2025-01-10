@@ -8,14 +8,37 @@ public class Task {
     private Date due;
     private TaskStatus status;
     private TaskPriority priority;
+    private User assignedUser;
 
-    public Task(String id, String title, String desc, Date due, TaskStatus status, TaskPriority priority) {
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", desc='" + desc + '\'' +
+                ", due=" + due +
+                ", status=" + status +
+                ", priority=" + priority +
+                ", assignedUser=" + assignedUser +
+                '}';
+    }
+
+    public User getAssignedUser() {
+        return assignedUser;
+    }
+
+    public void setAssignedUser(User assignedUser) {
+        this.assignedUser = assignedUser;
+    }
+
+    public Task(String id, String title, String desc, Date due, TaskStatus status, TaskPriority priority, User assignedUser) {
         this.id = id;
         this.title = title;
         this.desc = desc;
         this.due = due;
         this.status = status;
         this.priority = priority;
+        this.assignedUser=assignedUser;
     }
 
     public String getId() {
@@ -62,15 +85,4 @@ public class Task {
         this.priority = priority;
     }
 
-    @Override
-    public String toString() {
-        return "taskmanagement.Task{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", desc='" + desc + '\'' +
-                ", due=" + due +
-                ", status=" + status +
-                ", priority=" + priority +
-                '}';
-    }
 }
