@@ -1,6 +1,8 @@
 import payment.PaymentProcessor;
 import payment.emiPaymentProcessor;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,9 +33,15 @@ public class RentalSystem {
         cars.remove(carNum);
     }
 
-    public List<Car> searchCars(String maker,String name, ){}
-
-    private boolean isCarAvailable(){}
+    public List<Car> searchCars(String maker, String name, LocalDate start,LocalDate end){
+        List<Car>c=new ArrayList<>();
+        for(Car car:cars.values()){
+            if(car.getMaker().equalsIgnoreCase(maker) && car.getModel().equalsIgnoreCase(name) && car.getStatus()==CarStatus.AVAILABLE){
+                c.add(car);
+            }
+        }
+        return c;
+    }
 
 
 }
