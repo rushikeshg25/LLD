@@ -2,7 +2,7 @@ public class Car {
     private final String num;
     private final String maker;
     private final String model;
-    private int price;
+    private final int price;
     private final CarType type;
     private CarStatus status;
 
@@ -13,6 +13,10 @@ public class Car {
         this.model = model;
         this.type = type;
         this.price = price;
+        this.status=status;
+    }
+
+    public void setStatus(CarStatus status){
         this.status=status;
     }
 
