@@ -3,12 +3,21 @@ public class Car {
     private final String maker;
     private final String model;
     private int price;
+    private final CarType type;
+    private CarStatus status;
 
-    public Car(String num, String maker, String model, int price) {
+
+    public Car(String num, String maker, String model, CarType type, int price,CarStatus status) {
         this.num = num;
         this.maker = maker;
         this.model = model;
+        this.type = type;
         this.price = price;
+        this.status=status;
+    }
+
+    public CarType getType() {
+        return type;
     }
 
     public String getNum() {
@@ -26,4 +35,9 @@ public class Car {
     public int getPrice() {
         return price;
     }
+
+    public CarStatus getStatus(){
+        return status;
+    }
+
 }
