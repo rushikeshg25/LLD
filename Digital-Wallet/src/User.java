@@ -7,7 +7,7 @@ public class User {
     private final String pan;
     private List<Wallet> wallets;
 
-    public User(String userId, String name, String pan, List<Wallet> wallets) {
+    public User(String userId, String name, String pan) {
         this.userId = userId;
         this.name = name;
         this.pan = pan;
