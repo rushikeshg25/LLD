@@ -1,8 +1,12 @@
 package atmmachine;
 
-public class DepositTransaction implements Transaction{
+public class DepositTransaction extends Transaction{
+    public DepositTransaction(String transactionId, Account account, double amount) {
+        super(transactionId, account, amount);
+    }
+
     @Override
     public void execute() {
-
+        account.credit(amount);
     }
 }
